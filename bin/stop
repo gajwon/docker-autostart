@@ -1,0 +1,9 @@
+#!/bin/sh
+
+docker container ls --format "{{.Names}}" > DIR_BUFFER
+
+while read name; do
+    docker stop $name
+done < DIR_BUFFER
+
+exit 0

@@ -1,0 +1,7 @@
+#!/bin/sh
+
+for f in DIR_PRE_D; do
+  /bin/sh "$f"
+done
+
+exit 0

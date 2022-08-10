@@ -1,0 +1,5 @@
+#!/bin/sh
+
+/usr/sbin/iptables -A FORWARD -i br0 -j ACCEPT && /bin/sleep 3
+
+exit 0

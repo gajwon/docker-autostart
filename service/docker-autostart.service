@@ -1,0 +1,15 @@
+[Unit]
+Description=Docker Container Autostart
+After=network-online.target docker.socket docker.service firewalld.service containerd.service
+Wants=network-online.target
+Requires=docker.socket containerd.service docker.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStartPre=-DIR_OPT/pre
+ExecStart=DIR_OPT/start
+ExecStop=DIR_OPT/stop
+
+[Install]
+WantedBy=multi-user.target
