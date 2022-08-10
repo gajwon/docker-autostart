@@ -32,6 +32,7 @@ install.ser:
 	rm ./service/docker-autostart.service.tmp
 	chmod +x ${DIR_SER}/docker-autostart.service
 	systemctl daemon-reload
+	systemctl enable docker-autostart
 
 install.example:
 	cp ./pre.d/* ${DIR_ETC}/docker-autostart/pre.d/
