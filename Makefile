@@ -27,7 +27,7 @@ install.opt:
 
 install.ser:
 	mkdir -p ${DIR_SER}
-	cat ./service/docker-autostart.service | sed -e "s|DIR_OPT|$(DIR_OPT)/docker-autostart|g" > ./service/docker-autostart.service.tmp
+	cat ./service/docker-autostart.service | sed -e "s|DIR_OPT|$(DIR_OPT)/docker-autostart/bin|g" > ./service/docker-autostart.service.tmp
 	cp ./service/docker-autostart.service.tmp ${DIR_SER}/docker-autostart.service
 	rm ./service/docker-autostart.service.tmp
 	chmod +x ${DIR_SER}/docker-autostart.service
